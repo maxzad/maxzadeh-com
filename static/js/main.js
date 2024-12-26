@@ -52,14 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
             emailInput.disabled = true;
 
             try {
+                const formData = new FormData();
+                formData.append('email', emailInput.value);
+
                 const response = await fetch('/subscribe', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        email: emailInput.value
-                    })
+                    body: formData
                 });
 
                 const data = await response.json();
