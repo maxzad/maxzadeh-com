@@ -1,0 +1,49 @@
+/* Global Styles */
+:root {
+    --primary-color: #007bff;
+    --hover-color: #0056b3;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta-button {
+        padding: 15px 30px;
+    }
+}
